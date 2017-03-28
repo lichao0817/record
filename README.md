@@ -31,23 +31,29 @@ Start the application
 Notice: make sure you have Java 1.8 and Maven installed correctly and port 8080 on your local machine is available.
 
 ## Test the application
-
-Test get records sorted by gender:
+Test POST record
 <ol>
-<li>Open any web browser you like</li>
+<li>Open up the web browser</li>
+<li>Type <code>localhost:8080/records</code> in the address bar</li>
+<li>In the input box add a record in any of the three format: <code>White | Snow | F | White | 01/01/1900</code>, <code>Cartman, Eric, M, Blue, 08/01/1997</code> or <code>Kent Clark M Blue 02/29/1938</code></li>
+</ol>
+
+Test GET records sorted by gender:
+<ol>
+<li>Open up the web browser</li>
 <li>Type <code>localhost:8080/records/gender</code> in the address bar</li>
 <li>You should be able see the prepopulated records sorted by gender in JSON</li>
 </ol>
 
-Test get records sorted by date of birth:
+Test GET records sorted by date of birth:
 <ol>
-<li>Open any web browser you like</li>
+<li>Open up the web browser</li>
 <li>Type <code>localhost:8080/records/birthdate</code> in the address bar</li>
 </ol>
 
-Test get records sorted by last name in descending order:
+Test GET records sorted by last name in descending order:
 <ol>
-<li>Open any web browser you like</li>
+<li>Open up the web browser</li>
 <li>Type <code>localhost:8080/records/name</code> in the address bar</li>
 </ol>
 
