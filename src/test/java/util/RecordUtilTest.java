@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.File;
+import java.io.InputStream;
 import java.util.List;
 
 /**
@@ -15,8 +16,8 @@ public class RecordUtilTest {
     @Test
     public void parseRecordTest1() {
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("comma-delimited.txt").getFile());
-        List<Record> list = RecordUtil.getRecordsByBirthday(file);
+        InputStream in = classLoader.getResourceAsStream("comma-delimited.txt");
+        List<Record> list = RecordUtil.getRecordsByBirthday(in);
         for (int i = 1; i < list.size(); i++) {
             Assert.assertTrue(list.get(i - 1).getDateOfBirth().compareTo(list.get(i).getDateOfBirth()) < 0);
         }
@@ -24,8 +25,8 @@ public class RecordUtilTest {
     @Test
     public void parseRecordTest2() {
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("pipe-delimited.txt").getFile());
-        List<Record> list = RecordUtil.getRecordsByGender(file);
+        InputStream in = classLoader.getResourceAsStream("pipe-delimited.txt");
+        List<Record> list = RecordUtil.getRecordsByGender(in);
         for (int i = 1; i < list.size(); i++) {
             Assert.assertTrue(list.get(i - 1).getGender() == Gender.Female ||
                     (list.get(i - 1).getGender() == Gender.Male && list.get(i).getGender() == Gender.Male));
@@ -34,8 +35,8 @@ public class RecordUtilTest {
     @Test
     public void parseRecordTest3() {
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("space-delimited.txt").getFile());
-        List<Record> list = RecordUtil.getRecordsByName(file);
+        InputStream in = classLoader.getResourceAsStream("space-delimited.txt");
+        List<Record> list = RecordUtil.getRecordsByName(in);
         for (int i = 1; i < list.size(); i++) {
             Assert.assertTrue(list.get(i - 1).getLastName().compareTo(list.get(i).getLastName()) >= 0);
         }

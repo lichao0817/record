@@ -2,7 +2,10 @@ package dao;
 import model.Record;
 import util.RecordUtil;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.List;
 
 public class RecordDao {
@@ -10,8 +13,8 @@ public class RecordDao {
     public RecordDao() {
         if (list == null) {
             ClassLoader classLoader = getClass().getClassLoader();
-            File file = new File(classLoader.getResource("init.txt").getFile());
-            list = RecordUtil.getRecordsByBirthday(file);
+            InputStream in = classLoader.getResourceAsStream("init.txt");
+            list = RecordUtil.getRecordsByBirthday(in);
         }
     }
     public int count() {

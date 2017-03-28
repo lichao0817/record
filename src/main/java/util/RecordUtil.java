@@ -3,8 +3,10 @@ package util;
 import model.Gender;
 import model.Record;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -79,7 +81,7 @@ public class RecordUtil {
     private static Record constructRecord(String[] args) throws ParseException {
         return new Record(args[0], args[1], parseGender(args[2]), args[3], parseDate(args[4]));
     }
-    private static List<Record> parseRecords(File file) {
+    private static List<Record> parseRecords(InputStream file) {
         List<Record> res = new ArrayList<Record>();
         String separator = null;
         try {
@@ -99,8 +101,6 @@ public class RecordUtil {
                 }
                 res.add(constructRecord(line.split(separator)));
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -118,17 +118,17 @@ public class RecordUtil {
     public static void sortRecordsByName(List<Record> records) {
         sort(records, Order.NAME);
     }
-    public static List<Record> getRecordsByGender(File file) {
+    public static List<Record> getRecordsByGender(InputStream file) {
         List<Record> records = parseRecords(file);
         sortRecordsByGender(records);
         return records;
     }
-    public static List<Record> getRecordsByBirthday(File file) {
+    public static List<Record> getRecordsByBirthday(InputStream file) {
         List<Record> records = parseRecords(file);
         sortRecordsByBirthDay(records);
         return records;
     }
-    public static List<Record> getRecordsByName(File file) {
+    public static List<Record> getRecordsByName(InputStream file) {
         List<Record> records = parseRecords(file);
         sortRecordsByName(records);
         return records;
