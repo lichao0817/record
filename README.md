@@ -32,7 +32,7 @@ Test get records sorted by gender:
 <ol>
 <li>Open any web browser you like</li>
 <li>Type <code>localhost:8080/records/gender</code> in the address bar</li>
-<li>You should be able see the prepopulated records sorted by gender</li>
+<li>You should be able see the prepopulated records sorted by gender in JSON</li>
 </ol>
 
 Test get records sorted by date of birth:
