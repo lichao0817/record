@@ -59,4 +59,4 @@ Test get records sorted by last name in descending order:
 |model  |100     |100      |100    |
 |util   |100     |95.5     |87.1   |
 
-More details are in record/coverage
+More details are in <code>record/coverage</code>
