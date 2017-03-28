@@ -20,7 +20,7 @@ Start the application
 <li>Open your terminal or cmd</li>
 <li>Choose any path you like to clone the project</li>
 <li>Check out the project on github: <code>git clone https://github.com/lichao0817/record.git</code></li>
-<li><code>cd record</code></li>
+<li>Change your working directory to the root of the project: <code>cd record</code></li>
 <li>To build the application: <code>mvn package</code></li>
 <li>To start up the application: <code>java -jar target/record-1.0-SNAPSHOT.jar</code></li>
 <li>Now the app is up and running! You can test the api now!</li>
