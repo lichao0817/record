@@ -25,3 +25,24 @@ Start the application
 <li>To start up the application: <code>java -jar target/record-1.0-SNAPSHOT.jar</code></li>
 <li>Now the app is up and running! You can test the api now!</li>
 </ol>
+
+## Test the application
+
+Test get records sorted by gender:
+<ol>
+<li>Open any web browser you like</li>
+<li>Type <code>localhost:8080/records/gender</code> in the address bar</li>
+<li>You should be able see the prepopulated records sorted by gender</li>
+</ol>
+
+Test get records sorted by date of birth:
+<ol>
+<li>Open any web browser you like</li>
+<li>Type <code>localhost:8080/records/birthdate</code> in the address bar</li>
+</ol>
+
+Test get records sorted by last name in descending order:
+<ol>
+<li>Open any web browser you like</li>
+<li>Type <code>localhost:8080/records/name</code> in the address bar</li>
+</ol>
