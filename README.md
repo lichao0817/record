@@ -58,6 +58,6 @@ Test get records sorted by last name in descending order:
 |app    |  0     | 0       |  0    |
 |dao    |100     |100      |100    |
 |model  |100     |100      |100    |
-|util   |100     |95.5     |87.1   |
+|util   |100     |95.5     |90.1   |
 
 More details are in <code>record/coverage</code>
