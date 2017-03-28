@@ -12,6 +12,15 @@ import java.util.Date;
  */
 public class RecordTest {
     @Test
+    public void defaultConstructorTest(){
+        Record record = new Record();
+        Assert.assertNull(record.getLastName());
+        Assert.assertNull(record.getFirstName());
+        Assert.assertNull(record.getGender());
+        Assert.assertNull(record.getDateOfBirth());
+        Assert.assertNull(record.getFavoriteColor());
+    }
+    @Test
     public void setLastNameTest() {
         Record record = new Record("Obama", "Barack", Gender.Male, "Red", new Date());
         Assert.assertTrue(record.getLastName().equals("Obama"));
