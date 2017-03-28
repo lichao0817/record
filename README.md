@@ -4,6 +4,7 @@
 <li>Java 1.8</li>
 <li>Spring Boot</li>
 <li>Maven</li>
+<li>Thymeleaf</li>
 
 ## Prerequisites to run the application
 
