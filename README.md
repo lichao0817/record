@@ -11,6 +11,8 @@ You must have the following to run the application:
 <li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">JDK 1.8</a></li>
 <li><a href="https://maven.apache.org/">Maven</a></li>
 
+(Make sure you have them installed on your computer before you run the application)
+
 ## Run the application
 
 Start the application
