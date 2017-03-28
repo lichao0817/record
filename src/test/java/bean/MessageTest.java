@@ -1,5 +1,6 @@
-package model;
+package bean;
 
+import bean.Message;
 import org.junit.Assert;
 import org.junit.Test;
 

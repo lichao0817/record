@@ -1,7 +1,7 @@
 package app;
 
 import dao.RecordDao;
-import model.Message;
+import bean.Message;
 import model.Record;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
