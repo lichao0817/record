@@ -24,6 +24,8 @@ public class RecordDao {
         return list;
     }
     public void putRecord(Record record) {
-        list.add(record);
+        if (record != null) {
+            list.add(record);
+        }
     }
 }

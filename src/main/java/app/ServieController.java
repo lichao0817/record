@@ -1,32 +1,27 @@
 package app;
 
 import dao.RecordDao;
+import model.Message;
 import model.Record;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import util.RecordUtil;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("/records")
+@Controller
 public class ServieController {
     private RecordDao dao = new RecordDao();
     private List<Record> records = dao.getAllRecords();
-
-    @RequestMapping("/name")
-    public List<Record> getRecordsByName(){
-        RecordUtil.sortRecordsByName(records);
-        return records;
+    @GetMapping("/records")
+    public String getIndex(Model model) {
+        model.addAttribute("message", new Message());
+        return "index";
     }
-    @RequestMapping("/gender")
-    public List<Record> getRecordsByGender() {
-        RecordUtil.sortRecordsByGender(records);
-        return records;
-    }
-    @RequestMapping("/birthdate")
-    public List<Record> getRecordsByBirthdate() {
-        RecordUtil.sortRecordsByBirthDay(records);
-        return records;
+    @PostMapping("/records")
+    public String greetingSubmit(@ModelAttribute Message message) {
+        dao.putRecord(RecordUtil.parseLine(message.getMsg()));
+        return "index";
     }
 }

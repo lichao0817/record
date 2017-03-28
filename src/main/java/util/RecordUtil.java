@@ -81,28 +81,33 @@ public class RecordUtil {
     private static Record constructRecord(String[] args) throws ParseException {
         return new Record(args[0], args[1], parseGender(args[2]), args[3], parseDate(args[4]));
     }
+    public static Record parseLine(String line) {
+        String separator = null;
+        if (line.contains(", ")) {
+            separator = ", ";
+        }
+        else if (line.contains("|")) {
+            separator = " \\| ";
+        }
+        else {
+            separator = " ";
+        }
+        Record res = null;
+        try {
+            res = constructRecord(line.split(separator));
+        } catch (ParseException e) {
+            res = null;
+        }
+        finally {
+            return res;
+        }
+    }
     private static List<Record> parseRecords(InputStream file) {
         List<Record> res = new ArrayList<Record>();
-        String separator = null;
-        try {
-            Scanner scanner = new Scanner(file);
-            while (scanner.hasNext()) {
-                String line = scanner.nextLine();
-                if (separator == null) {
-                    if (line.contains(", ")) {
-                        separator = ", ";
-                    }
-                    else if (line.contains("|")) {
-                        separator = "\\|";
-                    }
-                    else {
-                        separator = " ";
-                    }
-                }
-                res.add(constructRecord(line.split(separator)));
-            }
-        } catch (ParseException e) {
-            System.out.println("User input is not valid");
+        Scanner scanner = new Scanner(file);
+        while (scanner.hasNext()) {
+            String line = scanner.nextLine();
+            res.add(parseLine(line));
         }
         return res;
     }

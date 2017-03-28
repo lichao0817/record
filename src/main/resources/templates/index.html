@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Record API</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Post a record</h1>
+<form action="#" th:action="@{/records}" th:object="${message}" method="post">
+    <div>Record: <input type="text" th:field="*{msg}" /></div>
+    <div><input type="submit" value="Submit" /></div>
+</form>
+</body>
+</html>
