@@ -102,7 +102,7 @@ public class RecordUtil {
                 res.add(constructRecord(line.split(separator)));
             }
         } catch (ParseException e) {
-            e.printStackTrace();
+            System.out.println("User input is not valid");
         }
         return res;
     }
