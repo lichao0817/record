@@ -49,3 +49,14 @@ Test get records sorted by last name in descending order:
 <li>Open any web browser you like</li>
 <li>Type <code>localhost:8080/records/name</code> in the address bar</li>
 </ol>
+
+## Test coverage
+
+|Package|Class, %|Method, %|Line, %|
+|-------|--------|---------|-------|
+|app    |  0     | 0       |  0    |
+|dao    |100     |100      |100    |
+|model  |100     |100      |100    |
+|util   |100     |95.5     |87.1   |
+
+More details are in record/coverage
