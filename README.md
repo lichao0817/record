@@ -23,4 +23,5 @@ Start the application
 <li><code>cd record</code></li>
 <li>To build the application: <code>mvn package</code></li>
 <li>To start up the application: <code>java -jar target/record-1.0-SNAPSHOT.jar</code></li>
+<li>Now the app is up and running! You can test the api now!</li>
 </ol>
