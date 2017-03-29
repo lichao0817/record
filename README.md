@@ -61,7 +61,6 @@ Test GET records sorted by last name in descending order:
 
 |Package|Class, %|Method, %|Line, %|
 |-------|--------|---------|-------|
-|app    |  0     | 0       |  0    |
 |dao    |100     |100      |100    |
 |model  |100     |100      |100    |
 |util   |100     |95.5     |90.1   |
