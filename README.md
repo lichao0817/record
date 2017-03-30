@@ -9,8 +9,7 @@
 ## Prerequisites to run the application
 
 You must have the following to run the application:
-<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">JDK 1.8</a></li>
-<li><a href="https://maven.apache.org/">Maven</a></li>
+<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html">JRE 8</a></li>
 
 (Make sure you have them installed on your computer before you run the application)
 
@@ -22,7 +21,6 @@ Start the application
 <li>Choose any path you like to clone the project</li>
 <li>Check out the project on github: <code>git clone https://github.com/lichao0817/record.git</code></li>
 <li>Change your working directory to the root of the project: <code>cd record</code></li>
-<li>To build the application: <code>mvn package</code></li>
 <li>To start up the application: <code>java -jar target/record-1.0.0.jar</code></li>
 <li>You should be able to see the message like this: <b>"Started Application in 12.957 seconds (JVM running for 13.446)"</b></li>
 <li>Now the app is up and running! You can test the api now!</li>
